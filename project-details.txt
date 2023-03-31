@@ -1,0 +1,67 @@
+Project definition:
+In this project, you will have to design an employee registration system to record basic information about a new employee in an organization. The system will also display the entries in summary and detailed formats.
+
+For a new employee, the system should accept entries of:
+    First name
+    Middle name 
+    Last name 
+    Date of birth
+    Social Security Number
+
+    Address 1
+    Address 2
+    City
+    State
+    Zip
+
+    Home phone Number
+    Mobile phone Number
+    Email Address
+
+    Date of hire
+    Current position
+    Department
+    Work phone Number
+    
+
+The system should validate entries to ensure the data is valid (SSN, DOB, Phone numbers, zip) using the techniques we have learned in this course
+
+An object should be used to store each employee entry, and all employees should consist of an array of objects
+
+The system should then store data in localStorage
+
+Condition statements should be used to handle some aspects of form validation
+
+The employee system should allow multiple employees to be displayed in a listing
+
+Each employee listing should be clickable to allow details to be displayed on a new page, frame, or window in an easy to read format
+
+The user should be able to return to enter a new employee. They should be able to view previously stored employees at any time
+
+The employee listings should remain persistent as long as the browser remains open so the user can enter and view multiple employees in a session
+
+A loop should be used to handle displaying data from the array in the general and detailed employee listing
+
+Excellent criteria:
+    Delivery
+        -Must also include all "good" criteria and no "unsatisfactory" criteria. 
+        -Completed 100% of requirements. 
+        -Code submitted on time. 
+        -Code submitted with clear instructions how to setup and execute. 
+        -Final project choice submitted on time. 
+        -User prompts are clear and easy to understand. 
+        -Excellent UI and input/output design.
+
+    Coding conventions
+        -Excellent use of white space, indentation. 
+        -Logically organized work. 
+        -Name, assignment title in each file
+
+    Documentation
+        -Clear comments with specific purpose noted for each function, control structure, input requirements, and output results 
+        -2 Preliminary Final Project Submissions with substantial progress demonstrated, on time
+
+    Runtime
+        -Executes without errors 
+        -Thorough and organized testing has been completed and evidence from test cases (steps, screenshots) is included with submission. 
+        -Core Requirements Implemented: try/catch, validation, basic/detail view, array of objects, storage, loop, conditional, globals/locals, dynamic html, event handlers

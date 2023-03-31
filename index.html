@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+    Ben Rohrs
+    Final project - Employee Registration
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Employee Registration</title>
 </head>
+
 <body>
-    Test
+    <div id="top">
+        <header>
+            <h1>Employee Registration</h1>
+        </header>
+
+        <nav class="navigator">
+            <ul>
+                <li><a href="#">Add employee</a></li>
+                <li><a href="#">View employee(s)</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <article>
+        <h2>Add a new employee</h2>
+
+        <form class="creator">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="first-name">First name</label>
+                <input type="text" name="first-name" id="first-name">
+                <br>
+                <label for="middle-name">Middle name</label>
+                <input type="text" name="middle-name" id="middle-name">
+                <br>
+                <label for="last-name">Last name</label>
+                <input type="text" name="last-name" id="last-name">
+
+                <br>
+
+                <label for="birth-date">Birth date</label>
+                <input type="date" name="birth-date" id="birth-date">
+
+                <br>
+
+                <label for="ssn">Social Security Number</label>
+                <input type="number" name="ssn" id="ssn">
+            </fieldset>
+
+            <fieldset>
+                <legend>Address</legend>
+
+                <label for="address-1">Address line 1</label>
+                <input type="text" name="address-1" id="address-1">
+                <br>
+                <label for="address-2">Address line 2</label>
+                <input type="text" name="address-2" id="address-2">
+
+                <br>
+
+                <label for="city">City</label>
+                <input type="text" name="city" id="city">
+                <br>
+                <label for="state">State</label>
+                <input type="text" name="state" id="state">
+                <br>
+                <label for="zip">ZIP</label>
+                <input type="number" name="zip" id="zip">
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Info</legend>
+
+                <label for="home-phone">Home Phone Number</label>
+                <input type="number" name="home-phone" id="home-phone">
+                <br>
+                <label for="mobile-phone">Mobile Phone Number</label>
+                <input type="number" name="mobile-phone" id="mobile-phone">
+
+                <br>
+
+                <label for="email-address">Email Address</label>
+                <input type="text" name="email-address" id="email-address">
+            </fieldset>
+
+            <fieldset>
+                <legend>Company Info</legend>
+
+                <label for="department">Department</label>
+                <input type="text" name="department" id="department">
+                <br>
+                <label for="current-position">Current Position</label>
+                <input type="text" name="current-position" id="current-position">
+                <br>
+                <label for="work-phone">Work Phone</label>
+                <input type="number" name="work-phone" id="work-phone">
+                <br>
+                <label for="hire-date">Date of Hire</label>
+                <input type="date" name="hire-date" id="hire-date">
+            </fieldset>
+
+            
+        </form>
+    </article>
 </body>
+
 </html>
