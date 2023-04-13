@@ -1,3 +1,8 @@
+/*
+    Ben Rohrs
+    Final project - Employee Registration
+*/
+
 function Employee(empAttrs) {
     // personal info
     this.firstName = empAttrs[0];

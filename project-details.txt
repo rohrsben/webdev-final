@@ -65,3 +65,16 @@ Excellent criteria:
         -Executes without errors 
         -Thorough and organized testing has been completed and evidence from test cases (steps, screenshots) is included with submission. 
         -Core Requirements Implemented: try/catch, validation, basic/detail view, array of objects, storage, loop, conditional, globals/locals, dynamic html, event handlers
+
+TODO:
+    - pretty up the viewer links css:
+        - change color on hover
+        - make the mouse indicate they're clickable
+
+    - make the nav bar horizontal
+
+    - have a popup/unhide text for a successful employee addition
+
+    - comments for viewer and detailedView js files
+
+    - general look improvements

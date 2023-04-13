@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+    Ben Rohrs
+    Final project - Employee Registration
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
-    <title>Viewer</title>
+    <link rel="stylesheet" href="styles/viewer.css">
+    <title>Employee Panopticon</title>
     <script src="scripts/Employee.js" defer></script>
     <script src="scripts/viewer.js" defer></script>
 </head>
 <body>
     <div id="top">
         <header>
-            <h1>Rohrs Employee Viewomatic 9000</h1>
+            <h1>Rohrs' Employee Viewomatic 9000</h1>
         </header>
 
         <nav class="navigator">
@@ -25,9 +32,9 @@
 
     <div id="viewer">
         <input type="button" id="gen-data" value="Gen Data">
-        <ul id="small-listings">
-
+        <ul id="short-listings" class="short-listings">
         </ul>
+        <p id="empty-message"></p>
     </div>
 </body>
 </html>
