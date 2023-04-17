@@ -26,8 +26,9 @@ function submitter() {
     if ( formIsValid ) {
         addRecord();
 
-        // since the record was successfully added, reset the form
+        // since the record was successfully added, reset the form and focus the first box
         document["new-employee"].reset();
+        document["new-employee"].elements["first-name"].focus();
     }
 }
 
