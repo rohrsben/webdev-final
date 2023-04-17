@@ -4,7 +4,3 @@ body {
     background: rgb(221, 221, 221);
     color: rgb(46, 46, 46);
 }
-
-input:invalid {
-    background-color: bisque;
-}
