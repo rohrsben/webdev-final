@@ -1,3 +1,6 @@
-To use, simply open index.html
+Usage: open code/index.html
 
-All functionality is implemented, it's just not very pretty. This means that clicking the employee names in viewer.html will open a new tab with detailed information, it just doesn't look like it.
+Updates since last time: 
+    - all functionality is implemented, leaving only themeing
+    - code is fully commented
+    - screenshots have been added

@@ -3,14 +3,15 @@
     Final project - Employee Registration
 */
 
-// give focus to the "first name" input when the window loads
+// overview: give focus to the "first name" input when the window loads
 window.addEventListener("load", function() {
     document["new-employee"].elements["first-name"].focus();
 })
 
-// attach submitter() to the "add record" button when its clicked
+// overview: make the 'add record' button execute 'submitter' when clicked
 document.getElementById("add-record").addEventListener("click", submitter);
 
+// overview: validate and save data entered into the 'new-employee' form
 function submitter() {
     // run the validators to make sure the form is valid
     validateSSN();
@@ -30,14 +31,17 @@ function submitter() {
     }
 }
 
-// the validate functions all work in the same way:
-//      1. acquire the relevant html input element
-//      2. compare the value to a preset regular expression
-//      3. if the comparison fails, set a custom validity message
-//         if it passes, remove said message
+// overview (for all validator functions):
+//     validate the entry indicated in the function name
+
+// all validators work the same way
+//     1. retrieve the form element the validator is testing
+//     2. test the input against the provided regex (a)
+//     3. if the input fails, set a custom validity message
+//        if it passes, remove said message
 function validateSSN() {
     let ssn = document.getElementById("ssn"); // (1)
-    let ssnRegex = /^\d{3}-\d{2}-\d{4}$/;
+    let ssnRegex = /^\d{3}-\d{2}-\d{4}$/; // (a)
 
     let inputFails = !ssnRegex.test(ssn.value); // (2)
     if ( inputFails ) { // (3)
@@ -84,7 +88,7 @@ function validateEmail() {
     }
 }
 
-// from form data, create an Employee object and add it to session storage
+// overview: from form data, create an Employee object and add it to session storage
 function addRecord() {
     // get the data from the form
     let employeeInfo = document.querySelectorAll("input.employee-data");
@@ -99,7 +103,7 @@ function addRecord() {
     //      the future is now
     let newEmployee = new Employee(newEmployeeAttributes);
 
-    // "company" is the key name used to store all created employees in session storage.
+    // "company" is the name of the array used to store all created employees in session storage.
     //      if it already exists (because an employee has already been created),
     //      load the old version so it doesn't get overwritten
     let company = [];

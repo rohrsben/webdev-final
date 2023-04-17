@@ -75,6 +75,4 @@ TODO:
 
     - have a popup/unhide text for a successful employee addition
 
-    - comments for viewer and detailedView js files
-
     - general look improvements

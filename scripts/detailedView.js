@@ -5,68 +5,59 @@
 
 window.addEventListener("load", displayInfo);
 
+// overview: for the detailed view, all info is stored in an html table,
+//     where every row is a separate key/value pair. the url ? string is an
+//     index relating to the 'company' array, which specifies which employee
+//     is to be displayed.
 function displayInfo() {
+    // separate the index from the url, and pass it to 'company'
     let index = location.search.slice(1);
     let company = JSON.parse(sessionStorage.getItem("company"));
     let employee = company[index];
+    // get the employee's full name as a header for the page
     let employeeName = `${employee.firstName} ${employee.middleName} ${employee.lastName}`
-
     document.getElementById("detailed-h1").textContent = employeeName;
-    let infoDiv = document.getElementById("detailed-info");
 
-    let birthDate = document.createElement("p");
-    birthDate.textContent = `Birth Date: ${employee.birthDate}`;
-    infoDiv.appendChild(birthDate);
+    // read information from 'employee', and set it in the corresponding table cell
+    let birthDate = document.getElementById("birth-date");
+    birthDate.textContent = employee.birthDate;
 
-    let ssn = document.createElement("p");
-    ssn.textContent = `Social Security Number: ${employee.ssn}`;
-    infoDiv.appendChild(ssn);
+    let ssn = document.getElementById("ssn");
+    ssn.textContent = employee.ssn;
 
-    let address1 = document.createElement("p");
-    address1.textContent = `Address 1: ${employee.address1}`;
-    infoDiv.appendChild(address1);
+    let address1 = document.getElementById("address1");
+    address1.textContent = employee.address1;
 
-    let address2 = document.createElement("p");
-    address2.textContent = `Address 2: ${employee.address2}`;
-    infoDiv.appendChild(address2);
+    let address2 = document.getElementById("address2");
+    address2.textContent = employee.address2;
 
-    let city = document.createElement("p");
-    city.textContent = `City: ${employee.city}`;
-    infoDiv.appendChild(city);
+    let city = document.getElementById("city");
+    city.textContent = employee.city;
 
-    let state = document.createElement("p");
-    state.textContent = `State: ${employee.state}`;
-    infoDiv.appendChild(state);
+    let state = document.getElementById("state");
+    state.textContent = employee.state;
 
-    let zip = document.createElement("p");
-    zip.textContent = `ZIP code: ${employee.zip}`;
-    infoDiv.appendChild(zip);
+    let zip = document.getElementById("zip");
+    zip.textContent = employee.zip;
 
-    let homePhone = document.createElement("p");
-    homePhone.textContent = `Home Phone: ${employee.homePhone}`;
-    infoDiv.appendChild(homePhone);
+    let homePhone = document.getElementById("home-phone");
+    homePhone.textContent = employee.homePhone;
 
-    let mobilePhone = document.createElement("p");
-    mobilePhone.textContent = `Mobile Phone: ${employee.mobilePhone}`;
-    infoDiv.appendChild(mobilePhone);
+    let mobilePhone = document.getElementById("mobile-phone");
+    mobilePhone.textContent = employee.mobilePhone;
 
-    let email = document.createElement("p");
-    email.textContent = `Email Address: ${employee.email}`;
-    infoDiv.appendChild(email);
+    let email = document.getElementById("email");
+    email.textContent = employee.email;
 
-    let department = document.createElement("p");
-    department.textContent = `Department: ${employee.department}`;
-    infoDiv.appendChild(department);
+    let department = document.getElementById("department");
+    department.textContent = employee.department;
 
-    let currentPos = document.createElement("p");
-    currentPos.textContent = `Current Position: ${employee.currentPos}`;
-    infoDiv.appendChild(currentPos);
+    let currentPos = document.getElementById("current-position");
+    currentPos.textContent = employee.currentPos;
 
-    let workPhone = document.createElement("p");
-    workPhone.textContent = `Work Phone: ${employee.workPhone}`;
-    infoDiv.appendChild(workPhone);
+    let workPhone = document.getElementById("work-phone");
+    workPhone.textContent = employee.workPhone;
 
-    let hireDate = document.createElement("p");
-    hireDate.textContent = `Hire Date: ${employee.hireDate}`;
-    infoDiv.appendChild(hireDate);
+    let hireDate = document.getElementById("hire-date");
+    hireDate.textContent = employee.hireDate; 
 }

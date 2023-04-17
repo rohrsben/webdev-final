@@ -5,8 +5,8 @@
 
 window.addEventListener("load", createListItems);
 
-// this button is just for when I design the css, so I don't have to do this manually
-document.getElementById("gen-data").onclick = function() {
+// overview: populate 'company' with test data so I don't have to enter it manually
+document.getElementById("gen-data").onclick = function () {
     let company = [];
     if (sessionStorage.getItem("company")) {
         company = JSON.parse(sessionStorage.getItem("company"));
@@ -20,7 +20,7 @@ document.getElementById("gen-data").onclick = function() {
     createListItems();
 
     function picker(arg) {
-        return arg[Math.floor( Math.random() * arg.length )];
+        return arg[Math.floor(Math.random() * arg.length)];
     }
 
     function genHuman() {
@@ -29,16 +29,17 @@ document.getElementById("gen-data").onclick = function() {
         let c = ["Gladstone", "Kansas City", "Liberty"]
         let s = ["Kansas", "Missouri"]
         let z = ["64119", "64118", "64151", "64155"]
-        
-        let empAttrs = [picker(fn), picker(fn), picker(ln), "04/01/2023", "123 washington", "Apt. 3", picker(c), picker(s), picker(z), "123", "456", "test@gmail.com", "Sales", "Teleprompter", "789", "04/01/2023"]
+
+        let empAttrs = [picker(fn), picker(fn), picker(ln), "04/01/2023", "000-00-0000", "123 washington", "Apt. 3", picker(c), picker(s), picker(z), "000-000-0000", "000-000-0000", "test@gmail.com", "Sales", "Teleprompter", "000-000-0000", "04/01/2023"]
         let nE = new Employee(empAttrs);
-    
+
         return nE;
     }
 }
 
-// adds a list item for each currently saved employee of their name
+// overview: create a short listing for every entry in 'company', which is clickable for a detailed view
 function createListItems() {
+    // get the ul element (where the listings will go) and company object
     let employeeList = document.getElementById("short-listings");
     let company = JSON.parse(sessionStorage.getItem("company"));
 
@@ -46,27 +47,27 @@ function createListItems() {
     if (company === null) {
         document.getElementById("empty-message").textContent = "No employees found!";
     } else {
+        // if employees are found, make sure "No employees found!" is not displayed
         document.getElementById("empty-message").textContent = "";
 
+        // overview: for every entry in 'company', create a clickable li element
         for (let i = 0; i < company.length; i++) {
+            // create the li
+            let newListing = document.createElement("li");
+            // get the name of the currently indexed employee
             let currentEmpl = company[i];
             let employeeName = `${currentEmpl.firstName} ${currentEmpl.lastName}`;
-    
-            let newListing = document.createElement("li");
-
-            newListing.textContent = employeeName;
-            newListing.className = "clickable";
-            newListing.onclick = function() {
-                window.open( linkCreator(i) )
-            }
             
+            // set the li title to the employee's name
+            newListing.textContent = employeeName;
+            // add a class for themeing
+            newListing.className = "clickable";
+            // when clicked, open the relevant employee's detailed view
+            newListing.onclick = function () {
+                window.open( `detailedView.html?${i}` )
+            }
+            // add the li to the 'short-listings' ul
             employeeList.appendChild(newListing);
         }
     }
-}
-
-function linkCreator(employeeIndex) {
-    let link = `detailedView.html?${employeeIndex}`;
-
-    return link;
 }
